@@ -1,31 +1,23 @@
-import FacadeUser from '../user/Facade';
-import log from '../../utils/logger';
-import FacadeException from '../../exceptions/FacadeException';
-import _ from '../../utils/validations';
+import User from '../user/Service';
+import LoginValidations from './Validation';
+import validations from '../../utils/validations';
+import utils from '../../utils/utils';
 import auth from '../../utils/auth';
 
 
 export default {
-  async loginSystem(email, encryptedPassword) {
-    log.info('[login] - [/POST] HTTP Request :: loginSystem');
+  async loginSystem(email, password) {
+    LoginValidations.emailValid(email)
+    LoginValidations.passwordValid(password)
+    
+    password = await utils.getPasswordEncrypted(password);
 
-    if (_.isEmpty(email)) {
-      throw new FacadeException(2, 'user.error.emailInvalid');
+    const user = await User.find({ email, password });
+        
+    if (validations.isEmpty(user) || validations.isEmpty(user[0]) || validations.isEmpty(user[0].id)) {
+      throw 'login.error.notLoggedIn';
     }
-
-    if (_.isEmpty(encryptedPassword)) {
-      throw new FacadeException(2, 'user.error.passwordRequired');
-    }
-
-    const user = await FacadeUser.getByEmailAndPassword(email, encryptedPassword);
-
-    if (_.isEmpty(user) || _.isEmpty(user[0]) || _.isEmpty(user[0].id)) {
-      throw new FacadeException(2, 'login.error.notLoggedIn');
-    }
-
-    if (user[0].blocked) {
-      throw new FacadeException(2, 'login.error.userBlocked');
-    }
+    
 
     user[0].token = auth.generateToken(user[0].id);
 

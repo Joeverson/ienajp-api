@@ -18,50 +18,26 @@ const validations = {
      */
   isEmailValid: (email) => {
     const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.[a-z]{2,3})+$/i;
-
-    if (!email || email.trim().length < 6 || !regex.test(email)) {
-      return false;
-    }
-
-    return true;
+    
+    return (email || email.trim().length > 6 || regex.test(email));
   },
 
   /**
      * 
      */
   isPasswordValid: (password) => {
-    if (validations.isEmpty(password) || password.trim().length !== 32) {
-      return false;
-    }
-
-    return true;
+    return (!validations.isEmpty(password) || (password && password.trim().length <= 32));
   },
 
   isPasswordLengthValid: (password) => {
-    if (!password || password.replace(/ /g, '').length > 32 || password.replace(/ /g, '').length < 4) {
-      return false;
-    }
-
-    return true;
+    return !(!password || password.replace(/ /g, '').length > 32 || password.replace(/ /g, '').length < 4);
   },
 
   /**
      * 
      */
   isNameUserValid: (name) => {
-    if (!name || validations.isEmpty(name)) {
-      return false;
-    }
-
-    if (name.trim().length > 200) {
-      return false;
-    }
-
-    if (!_.isNaN(parseInt(name)) && !_.isNaN(parseFloat(name))) {
-      return false;
-    }
-
-    return true;
+    return (name && name.trim().length <= 200 && /[a-z]+/g.test(name));
   },
 
   /**

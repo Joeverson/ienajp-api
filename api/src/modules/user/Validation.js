@@ -1,9 +1,7 @@
 import _ from 'lodash';
-import DAO from './DAO';
-import FacadeException from '../../exceptions/FacadeException';
-import Validations from '../../utils/validations';
-
-const dao = new DAO();
+import validations from '../../utils/validations';
+import model from '../../db/models';
+import ValidationException from '../../exceptions/ValidationException';
 
 /**
  * @class SectorValidation
@@ -15,56 +13,68 @@ export default {
    * and the attribute id of sector is int.
    * @param sector sector to be validated
    */
-  async verifyId(id) {
+  async idValid(id) {
+    // todo - ir ao banco vê se eexiste mesmo o usuario com esse id
     if (_.isNaN(id)) {
-      throw new FacadeException(1, 'error.errorUnexcepted');
+      throw new ValidationException(1, 'error.errorUnexcepted');
     }
     
-    if (_.isEmpty(await dao.find(id))) {
-      throw new FacadeException(1, 'user.error.userNotExist');
-    }
-  },
-  /**   
-   * Método verifica se é um numeral valido
-   * para a matricula
-   * 
-   * @param {String} matriculation 
-   */
-  checkMatriculationValid(matriculation) {
-    if (!Validations.number(Array.from(matriculation))) {
-      throw new FacadeException(2, 'user.error.matriculationInvalid');
+    if (_.isEmpty(await model.User.findById(id))) {
+      throw new ValidationException(1, 'user.error.userNotExist');
     }
   },
 
   /**
-   * Método verifica se o tamanho da matricula é valida
-   * 
-   * @param {String} matriculation 
+   * valida se é um email valido
+   * @param {String} email 
    */
-  verifyLenghtMatriculation(matriculation) {
-    if (String(matriculation).slice('').length > 10) {
-      throw new FacadeException(2, 'user.error.matriculationLengthInvalid');
+  emailValid(email) {
+    // todo - deve ir no banco para poder saber se já existe algum email
+    if (!validations.isEmailValid(email)) {
+      throw new ValidationException(2, 'user.error.emailInvalid');
     }
   },
 
   /**
-   * Metodo responsável por verificar se a matricula foi passada
-   * @param {String} matriculation 
+   * Validando se a senha é uma senha valida
+   * @param {String} password 
    */
-  verifyMatriculationRequired(matriculation) {
-    if (!matriculation) {
-      throw new FacadeException(2, 'user.error.matriculationRequired');
+  passwordValid(password) {
+    if (validations.isEmpty(password) && !validations.isPasswordValid(password)) {
+      throw new ValidationException(2, 'user.error.passwordInvalid');
     }
   },
 
   /**
-   * Método responsável por fazer as checagens 
-   * na matricula
-   * 
-   * @param {String} matriculation 
+   * Validando se a senha é uma senha valida
+   * @param {String} password 
    */
-  validateMatriculation(matriculation) {
-    this.verifyMatriculationRequired(matriculation);
-    this.verifyLenghtMatriculation(matriculation);
+  passwordLengthValid(password) {
+    if (validations.isEmpty(password) && !validations.isPasswordLengthValid(password)) {
+      throw new ValidationException(2, 'user.error.passwordInvalid');
+    }
+  },
+
+  /**
+   * validando se o nome é um nome valido
+   * @param {String} name 
+   */
+  nameValid(name) {
+    if (!validations.isNameUserValid(name)) {
+      throw new ValidationException(2, 'user.error.nameInvalid');
+    }
+  },
+
+  /**
+   * validando se o nome é um nome valido
+   * @param {String} name 
+   */
+  userTypeValid(userTypeId) {
+    // todo - search in db
+
+    if (!validations.isInteger(userTypeId) && validations.isEmpty(userTypeId)) {
+      throw new ValidationException(2, 'user.error.nameInvalid');
+    }
   }
+  
 };
