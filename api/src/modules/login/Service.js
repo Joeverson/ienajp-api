@@ -20,6 +20,7 @@ export default {
     
 
     user[0].token = auth.generateToken(user[0].id);
+    user[0]['password'] = false;
 
     return user[0];
   }

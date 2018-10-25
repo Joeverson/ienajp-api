@@ -3,6 +3,9 @@ import App from './App.vue'
 import routes from './routes'
 import VueRouter from 'vue-router'
 
+import './helpers/Http'
+import notification from './helpers/Notification'
+
 import './assets/styles/index.scss'
 import './assets/scripts/index.js'
 
@@ -15,8 +18,9 @@ const router = new VueRouter({
 });
 
 Vue.use(VueRouter)
+Vue.use(notification)
 
-new Vue({
+export default new Vue({
   router,  
   render: h => h(App)
 }).$mount('#app')

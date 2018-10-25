@@ -1,5 +1,6 @@
 <template>
   <div id='app'>
+    <notification></notification>
     <div id='loader'>
       <div class="spinner"></div>
     </div>
@@ -8,9 +9,8 @@
 </template>
 
 <script>
-
 export default {
-  mounted() {
+  mounted() {    
     const loader = document.getElementById("loader");
 
     setTimeout(() => {

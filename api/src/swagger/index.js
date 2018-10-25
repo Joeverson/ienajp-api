@@ -7,7 +7,7 @@ module.exports = {
   info: {
     description: 'Descrição',
     version: pjson.version,
-    title: 'API - SCM Corning'
+    title: 'API - Assert Admin'
   },
   host: `${process.env.HOST}:${process.env.PORT}`,
   basePath: '/api/v1',

@@ -1,7 +1,5 @@
 <template>
-  <!-- #Main ============================ -->
     <div class="page-container">
-      <!-- ### $Topbar ### -->
       <div class="header navbar bg-assert">
         <div class="header-container">
           <ul class="nav-left">

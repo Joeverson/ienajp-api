@@ -10,8 +10,6 @@ class User {
   }
 
   async insert(user) {
-    console.log(user);
-    
     UserValidation.emailValid(user.email);
     UserValidation.passwordValid(user.password);
     UserValidation.nameValid(user.name);

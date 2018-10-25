@@ -9,14 +9,14 @@
       </div>
       <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
         <h4 class="fw-300 c-grey-900 mB-40">Login</h4>
-        <form>
+        <form v-on:submit.prevent>
           <div class="form-group">
             <label class="text-normal text-dark">Usuário</label>
-            <input type="email" class="form-control" placeholder="Usuário">
+            <input type="email" class="form-control" placeholder="Usuário" v-model='form.email'>
           </div>
           <div class="form-group">
             <label class="text-normal text-dark">Senha</label>
-            <input type="password" class="form-control" placeholder="Senha">
+            <input type="password" class="form-control" placeholder="Senha" v-model="form.password">
           </div>
           <div class="form-group">
             <div class="peers ai-c jc-sb fxw-nw">
@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div class="peer">
-                <button class="btn btn-primary">Login</button>
+                <button @click='handleSubmit' class="btn btn-primary">Login</button>
               </div>
             </div>
           </div>
@@ -39,13 +39,27 @@
 </template>
 
 <script>
-  import logo from '../../../assets/images/logo-assert.png'
-
+  import logo from '../../../assets/images/logo-assert.png';
+  import { User } from '../../../helpers/requests';
+  
+  /* eslint-disable */ 
   export default {  
     name: 'sigin',
     data() {
       return {
-        logo
+        logo,
+        form: {
+          email: 'joerverson@g.com',
+          password: ''
+        }
+      }
+    },
+    methods: {
+      async handleSubmit() {        
+        const result = await User.auth.login(this.form);
+        if(!result) {
+          this.$notification.error('Email ou senha não conferem.')
+        }
       }
     }
   }
