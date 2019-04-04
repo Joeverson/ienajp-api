@@ -1,0 +1,29 @@
+export const PRODUCTION_LINES_STATUS = {
+  ABERTO: 1,
+  PRODUZINDO: 2,
+  PRODUZIDO: 3,
+  RETRABALHO: 4,
+  DESCARTADO: 5
+};
+
+export const PRODUCTION_ORDER_STATUS = {
+  ABERTO: 1,
+  PRODUZINDO: 2,
+  PRODUZIDO: 3
+};
+
+export const ACCESS_PROFILE = {
+  OPERADOR: 1,
+  SUPERVISOR: 2,
+  GERENTE: 3
+};
+
+export const MAXIMUM_OF_FAILURES = 3;
+
+export const SECTOR_TYPE = {
+  ENTRADA: 'I',
+  INSPENCAO: 'D',
+  SAIDA: 'O'
+};
+
+export const ONE_MINUTES_IN_MILLISECONDS = 60000;

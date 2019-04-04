@@ -1,63 +1,73 @@
 {
-  "name": "assert-admin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "Advansat",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "node ./scripts/development.js",
+    "start": "node index.js",
+    "build-test": "NODE_ENV=development pm2 start index.js --interpreter ./node_modules/.bin/babel-node --name server_test",
+    "build-professora": "NODE_ENV=development pm2 start index.js --interpreter ./node_modules/.bin/babel-node --name server_professora",
+    "build-production": "NODE_ENV=development pm2 start index.js --interpreter ./node_modules/.bin/babel-node --name server_production",
+    "build": "babel index.js -d dist && babel src -d dist/src ",
+    "production": "node dist/index.js",
+    "pretest": "eslint --fix src/**",
+    "lint": "./node_modules/.bin/eslint index.js src/ test/",
+    "test": "node ./scripts/test.js",
+    "coverage-report": "./node_modules/.bin/nyc report --reporter=lcov",
+    "module:create": "node src/utils/generator/auto-create.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-html": "^4.0.5",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "moment": "^2.22.2",
+    "nodemon": "^1.18.3",
+    "nyc": "^13.0.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "bootstrap": "^4.1.3",
-    "bootstrap-datepicker": "^1.8.0",
-    "chart.js": "^2.7.3",
-    "datatables": "^1.10.18",
-    "easy-pie-chart": "^2.1.7",
-    "fullcalendar": "^3.9.0",
-    "jquery": "^3.3.1",
-    "jquery-sparkline": "^2.4.0",
-    "jvectormap": "^2.0.4",
-    "jwt-decode": "^2.2.0",
-    "load-google-maps-api": "^1.3.2",
-    "masonry-layout": "^4.2.2",
-    "node-sass": "^4.9.4",
-    "perfect-scrollbar": "^1.4.0",
-    "popper.js": "^1.14.4",
-    "sass-loader": "^7.1.0",
-    "skycons": "^1.0.0",
-    "vue": "^2.5.17",
-    "vue-axios": "^2.1.4",
-    "vue-router": "^3.0.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.5",
-    "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-service": "^3.0.5",
-    "vue-template-compiler": "^2.5.17"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "@babel/polyfill": "^7.0.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "child_process": "^1.0.2",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "dotenv": "^5.0.1",
+    "exec-sh": "^0.2.2",
+    "express": "^4.16.3",
+    "express-fileupload": "^0.4.0",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.1",
+    "mongoose": "^5.4.22",
+    "ora": "^2.1.0",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "random-token": "0.0.8",
+    "restify-cors-middleware": "^1.1.1",
+    "swagger-jsdoc": "^3.2.3",
+    "swagger-ui-express": "^4.0.1",
+    "token": "^0.1.0",
+    "winston": "^2.4.3"
+  }
 }
