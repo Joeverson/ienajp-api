@@ -1,90 +1,64 @@
 # Tecnologies used
--  [node](https://nodejs.org) : server tecnology base
-
--  [express](http://expressjs.com/) : used for create the API rest
+-  [node](https://nodejs.org)
+-  [express](http://expressjs.com/) : usado para criar a api restful
+-  [mongodb](https://www.mongodb.com): usado para banco de dados
 
 # Routes
 
--  **Get [with param id or not]**
+-  **Get**
 -  **Post**
 -  **Put**
 -  **Delete**  
 
 # Object context comunications  
 Para poder se comunicar entre o cliente e o servidor basta passar um objeto de comunicação onde todas as informações básicas de comunicações. É bem simples o objeto veja abaixo como ele é construído.
+```
+{
+  data: [],	    
+  token: '',	    
+  status: {
+    success: <true || false>
+    message: ''
+  }  
+}
+```
 
-    {
-      token: '',	    
-	    data: {},	    
-	    options: {}  
-	}
 
 Por esse modelo sofrer mutações, então como estrategia de funcionamento, ao cliente se conectar com nosso servidor pela primeira vez, o servidor vai enviar para ele o modelo de comunicação para que sempre qualquer cliente que se conectar conosco sempre tenha o modelo de comunicação esteja atualizados.
 
 # Base of the request API - ENDPOINT
-  > /api/v1
+
+```
+/api/v1
+```
 
 # ENDPOINTS
  
-## User
-
-- `GET /user/search HTTP/1.1` - Return all users
-- `GET /user/searchCounter` - Return the quantity of all users
-- `GET /user/delete` - Delete user
-
-## Customer
-
-- `POST /customer` - Return all customers
-- `GET /customer/:id` - Return data of specific customers
-- `GET /customer/:id/orders` - Return all orders of customer
-
-## Product
-
-- `GET /product` - Return all products
-- `GET /product/:id` - Return data of specific products
-
-## Produceeding
-
-- `GET /produced` - Return all products produced
-- `GET /produced/:id` - Returns produced products filtered by id
-- `GET /produced/quality` - Returns the quality of the products produced
-
-## Proceeding
-
-- `GET /proceeding/producing` - Return all products that are in production line
-
-
-## Planning Production
-
-- `GET /planning-production` - Return all prodution planning
-- `POST /planning-production` - Insert the prodution planning and yout bound service orders in the db
-- `GET /planning-production/:id` - Returns prodution planning filtered by id and your bound service orders
-- `PUT /planning-production/:id` - Update the prodution planning and your bound service orders
-- `DELETE /planning-production/:id` - Delete the prodution planning and your bound service orders
-- `GET /produced/quality` - Returns the quality of the products produced
-
-## Sector
-- `GET /sector/status` - Return all sectors status
-- `GET /sector/reworks` - Return all reworks on sectors
-- `POST /sector` - Insert the sector in the db
-- `GET /sector` - Returns all sectors paginates or filtered by idArea with query string
-- `GET /sector/:id/status` - Return all status by sector
-- `GET /sector/:id/errors` - Return all errors by sector
-- `GET /sector/:id/orders` - Return all orders service by sector
-- `GET /sector/:id/variables` - Return all variables perfommace by sector
-- `PUT /sector/:id` - Update the sector
-- `DELETE /sector/:id` - Delete the sector
-- `GET /sector/:id` - Return the sector
-
-## Production Lines
-- `GET /production-lines` - Returns everything in the production line inventory
+Para poder acessar os endpoins basta rodar o sistema e acessar o path: `/api/v1/docs`
 
 # .env
 
-Para poder trazer mais segurança e sigilo com as informações do banco de dados, iremos utilizar o .env para poder
+Para poder trazer mais segurança e sigilo com as informações do banco de dados, iremos utilizar os arquivos de configuração env para poder
 deixar as informações de conexões do banco de dados e possivelmento no futuro as informações de API token, mas de modo geral usamos uma lib que faz o carregamento do arquivo .env e alimenta a variavel global do node chamado 'process.env' onde pode ser acessado em quelquer lugar do script, para poder usar isso vamos primeiro instalar o 'dotenv'
 
 -  [dotenv](https://github.com/motdotla/dotenv)
+
+## criando arquivo de configuração
+
+- Crie uma pasta com o nome `env` na raiz do projeto
+- Dentro crie um arquivo `.env.development`, dentro dela coloque as informações do banco de dados
+  como no exemplo abaixo:
+
+```
+DB_HOST=<mongodb://localhost>
+DB_NAME=<NAME-DATABASE>
+
+API_HOST=<HOST-API>
+API_PORT=<PORT>
+
+SECRET_KEY_TOKEN=<KEY-ANYTHING-kkkk>
+```
+
 
 Depois de instalado devemos criar um arquivo .env na raiz da aplicação, e nela podemos definir qualquer informação seguindo o padrão KEY=VALUE, e para poder capturar estas informações basta chamar process.env.KEY e o dados será disponibilizado de forma simples e rapida.
 
