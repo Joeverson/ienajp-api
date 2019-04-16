@@ -1,7 +1,7 @@
-import bodyParser from 'body-parser';
-import _ from 'lodash';
-import fs from 'fs';
-import cors from 'cors';
+import bodyParser from 'body-parser'
+import _ from 'lodash'
+import fs from 'fs'
+import cors from 'cors'
 
 /**
  * -------------------------------
@@ -16,13 +16,13 @@ import cors from 'cors';
 const middleware = {
   config: (app) => {
     // parse application/json
-    app.use(bodyParser.json());
+    app.use(bodyParser.json())
     app.use(bodyParser.urlencoded({
       extended: false
-    }));
+    }))
 
     // cors for problem auth browser and cliente
-    app.use(cors());
+    app.use(cors())
 
     /**
     * adicionando o midlleware para a plicação como um todo
@@ -32,40 +32,39 @@ const middleware = {
     */
 
     middleware.loadMiddleArray(`${__dirname}/load`).then((middle) => {
-      app.use(middle);
-    });
+      app.use(middle)
+    })
   },
   /**
-   * 
+   *
    * methodo responsavel por ler um path e fazer a importaçção de middlewares e retorna 
    * um array de todos os middles encontradis no path
-   * 
+   *
    */
   loadMiddleArray: path => new Promise((resolve, reject) => {
     // array
-    const arr = [];
+    const arr = []
 
     // reader files in path
     fs.readdir(path, (er, f) => {
       if ((_.isUndefined(f)) || (_.isEmpty(f))) {
-        resolve([]);
+        resolve([])
       } else {
-        // read the file especific 
+        // read the file especific
         _.forEach(f, (fileName) => {
             // fazendo as importações dos middlewares
             import(`${path}/${fileName}`).then((middle) => {
               // adicionandoa middleware no servidor express
-              arr.push(middle.default);
+              arr.push(middle.default)
 
-              resolve(arr);
+              resolve(arr)
             }).catch((err) => {
-              reject(err);
-            });
-        });
+              reject(err)
+            })
+        })
       }
-    });
+    })
   })
-};
+}
 
-
-export default middleware;
+export default middleware

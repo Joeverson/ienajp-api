@@ -1,16 +1,16 @@
-import log from '../utils/logger';
+import log from '../utils/logger'
 
 export default class Exception {
-  constructor(code, message, type, data) {
+  constructor (code, message, type, data) {
     if (this.constructor === Exception) {
-      throw new TypeError('Can not construct abstract class.');
+      throw new TypeError('Can not construct abstract class.')
     }
 
-    this.code = code;
-    this.message = message;
-    this.type = type;
-    this.data = data || [];
+    this.code = code
+    this.message = message
+    this.type = type
+    this.data = data || []
 
-    log.error(type, message);
+    log.error(type, message)
   }
 }

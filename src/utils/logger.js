@@ -1,13 +1,13 @@
-import winston from 'winston';
-import moment from 'moment';
+import winston from 'winston'
+import moment from 'moment'
 
 /**
- * 
+ *
  * the scrit by logger erros in system
- * 
- * 
+ *
+ *
  */
-const tsFormat = () => moment().format('DD-MM-YYYY HH:mm:ss').trim();
+const tsFormat = () => moment().format('DD-MM-YYYY HH:mm:ss').trim()
 
 export default new (winston.Logger)({
   transports: [
@@ -21,4 +21,4 @@ export default new (winston.Logger)({
       level: 'error'
     })
   ]
-});
+})

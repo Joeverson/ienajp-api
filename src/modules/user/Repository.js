@@ -5,7 +5,7 @@ import {
 import UserValidation from './Validation'
 
 export default {
-  async create(data, callback) {
+  async create (data) {
     // validações
     await UserValidation.passwordValid(data.password)
     await UserValidation.nameValid(data.name)
@@ -24,7 +24,7 @@ export default {
   /**
    * find all users
    */
-  async all() {
+  async all () {
     return {
       data: await User.find({})
     }
@@ -33,15 +33,21 @@ export default {
   /**
    * Fazendo busca por id
    */
-  async findById(id) {
+  async findById (id) {
     return {
       data: await User.findById(id)
     }
   },
 
-  async update(id, data) {
+  async update (id, data) {
     return {
-      data: await User.updateOne({_id:id}, data)
+      data: await User.updateOne({ _id: id }, data)
+    }
+  },
+
+  async delete (id) {
+    return {
+      data: await User.deleteOne({ _id: id })
     }
   }
 }

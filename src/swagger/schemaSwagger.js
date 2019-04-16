@@ -1,5 +1,5 @@
 export default class SchemaSwagger {
-  constructor(_value = {}, propertiesStatus = {}, token = '') {
+  constructor (_value = {}, propertiesStatus = {}, token = '') {
     this.schema = {
       type: 'object',
       properties: {
@@ -17,6 +17,6 @@ export default class SchemaSwagger {
           nullable: true
         }
       }
-    };
+    }
   }
 }

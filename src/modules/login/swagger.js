@@ -1,13 +1,13 @@
-import SchemaSwagger from '../../swagger/schemaSwagger';
+import SchemaSwagger from '../../swagger/schemaSwagger'
 
 const exampleToken = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
 eyJpc3MiOiJ0b3B0YWwuY29tIiwiZXhwIjoxNDI2NDIwODAwLCJodHRwOi8vdG9wdGFsLmNvbS9qd3RfY2xhaW1zL2lzX2FkbWluIjp0cnVlLCJjb21wYW55IjoiVG9wdGFsIiwiYXdlc29tZSI6dHJ1ZX0.
-yRQYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw`;
+yRQYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw`
 
 export const tag = {
   name: 'login',
   description: 'Operations about login'
-};
+}
 
 // MODELS
 export const Login = {
@@ -29,7 +29,7 @@ export const Login = {
       description: 'You must encrypt with md5 to send'
     }
   }
-};
+}
 
 export const LoginReturned = {
   type: 'object',
@@ -66,7 +66,7 @@ export const LoginReturned = {
       example: exampleToken
     }
   }
-};
+}
 // FIM DOS MODELS
 
 // ROTA RAIZ
@@ -107,4 +107,4 @@ export const routeRoot = {
       }
     }
   }
-};
+}

@@ -1,19 +1,19 @@
-import pjson from '../../package.json';
-import * as UserSwagger from '../../src/modules/user/swagger';
-import * as LoginSwagger from '../../src/modules/login/swagger';
+import pjson from '../../package.json'
+import * as UserSwagger from '../../src/modules/user/swagger'
+import * as LoginSwagger from '../../src/modules/login/swagger'
 
 module.exports = {
   swagger: '2.0',
   info: {
     description: 'Descrição',
     version: pjson.version,
-    title: 'API - Assert Admin'
+    title: 'API Advansat'
   },
-  host: `${process.env.HOST}:${process.env.PORT}`,
+  host: `${process.env.API_HOST}:${process.env.API_PORT}`,
   basePath: '/api/v1',
   tags: [
     LoginSwagger.tag,
-    UserSwagger.tagUser,
+    UserSwagger.tagUser
   ],
   schemes: [
     'http'
@@ -21,7 +21,7 @@ module.exports = {
   paths: {
     '/login': LoginSwagger.routeRoot,
     '/user': UserSwagger.routeRootUser,
-    '/user/{id}': UserSwagger.routeByIDUser,
+    '/user/{id}': UserSwagger.routeByIDUser
   },
   securityDefinitions: {
     Bearer: {
@@ -40,6 +40,6 @@ module.exports = {
     LoginReturned: LoginSwagger.LoginReturned,
     User: UserSwagger.User,
     NewUser: UserSwagger.NewUser,
-    UpdateUser: UserSwagger.UpdateUser,
+    UpdateUser: UserSwagger.UpdateUser
   }
-};
+}

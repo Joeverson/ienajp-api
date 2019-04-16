@@ -88,6 +88,6 @@ app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
  * -------------------------------
  * */
 
-server.listen(process.env.API_PORT || 3004, process.env.API_HOST, () => {
+server.listen(process.env.API_PORT || 3004, process.env.API_HOST || 'localhost', () => {
   console.log('Funcionando...');
 });

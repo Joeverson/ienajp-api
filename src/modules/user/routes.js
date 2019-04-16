@@ -19,16 +19,16 @@ App.route('/')
       })
   })
   .post((req, res) => {
-    const context = new Context(res);
+    const context = new Context(res)
 
-    Repository.create(req.query)
+    Repository.create(req.query || req.body)
       .then(data => {
         context.success(data, 'user.create.success')
       })
       .catch(err => {
         context.error(err.message)
       })
-  });
+  })
 
 App.route('/:id')
   .get(async (req, res) => {
@@ -56,11 +56,13 @@ App.route('/:id')
   .delete(async (req, res) => {
     const context = new Context(res)
 
-    try {
-      context.success(await User.delete(req.params.id), 'user.delete.success')
-    } catch (err) {
-      context.error(err)
-    }
-  });
+    Repository.delete(req.params.id)
+      .then(data => {
+        context.success(data, 'user.delete.success')
+      })
+      .catch(err => {
+        context.error(err)
+      })
+  })
 
-export default App;
+export default App

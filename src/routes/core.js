@@ -1,14 +1,15 @@
-import fs from 'fs';
-import _ from 'lodash';
-import middleware from '../middlewares/core';
-import logger from '../utils/logger';
+/* eslint-disable */
+import fs from 'fs'
+import _ from 'lodash'
+import middleware from '../middlewares/core'
+import logger from '../utils/logger'
 
 /*
 ------------------------
 PREFIXO DA API
 ------------------------
 */
-const PREFIX = '/api/v1';
+const PREFIX = '/api/v1'
 
 /**
  * função que adapta as rotas para ler se vem na rota composta ou simples
@@ -20,25 +21,25 @@ const PREFIX = '/api/v1';
 const adaptiveRouter = (name) => {
   const ignore = [ // array de caracteres que seram ignorados na montagem da string
     '-', '_'
-  ];
+  ]
 
-  const arr = name.split([]);
-  const word = [];
+  const arr = name.split([])
+  const word = []
 
   _.forEach(arr, (letter) => {
     // condicionais de ignores
     if (_.indexOf(ignore, letter) === -1) {
       if (letter === letter.toUpperCase()) {
-        word.push('-', letter.toLowerCase()); // controlle caso já venha com o '-' no modulo | só controlle de erros
+        word.push('-', letter.toLowerCase()) // controlle caso já venha com o '-' no modulo | só controlle de erros
       } else {
-        word.push(letter);
+        word.push(letter)
       }
     }
-  });
-  const joined = word.join('');
+  })
+  const joined = word.join('')
 
-  return /-/g.test(joined) ? joined : name;
-};
+  return /-/g.test(joined) ? joined : name
+}
 
 /**
  * -------------------------------
@@ -64,23 +65,23 @@ export default {
                 middleware.loadMiddleArray(`${__dirname}/../modules/${_module}/middlewares`).then((middle) => {
                   if (_.isEmpty(middle)) {
                     // add the router in instance app express
-                    app.use(`${PREFIX}/${adaptiveRouter(_module)}`, routers.default); // forma mais atual com o padrão rest API para as routes
-                    app.use(`${PREFIX}/${_module}`, routers.default); // ## esse é a forma antiga de captura e modules=>route, depois remover quando adaptar as routes para nomes compostos como explica a função adaptiveRoute
+                    app.use(`${PREFIX}/${adaptiveRouter(_module)}`, routers.default) // forma mais atual com o padrão rest API para as routes
+                    app.use(`${PREFIX}/${_module}`, routers.default) // ## esse é a forma antiga de captura e modules=>route, depois remover quando adaptar as routes para nomes compostos como explica a função adaptiveRoute
                   } else {
                     // add the router in instance app express
-                    app.use(`${PREFIX}/${adaptiveRouter(_module)}`, middle, routers.default);
-                    app.use(`${PREFIX}/${_module}`, middle, routers.default); // ## esse é a forma antiga de captura e modules=>route, depois remover quando adaptar as routes para nomes compostos como explica a função adaptiveRoute
+                    app.use(`${PREFIX}/${adaptiveRouter(_module)}`, middle, routers.default)
+                    app.use(`${PREFIX}/${_module}`, middle, routers.default) // ## esse é a forma antiga de captura e modules=>route, depois remover quando adaptar as routes para nomes compostos como explica a função adaptiveRoute
                   }
                 }).catch((e) => {
-                  logger.error(e);
-                });
+                  logger.error(e)
+                })
               }).catch((error) => {
-                logger.error(error);
-              });
+                logger.error(error)
+              })
             }
-          });
-        });
-      });
-    });
+          })
+        })
+      })
+    })
   }
-};
+}
