@@ -5,7 +5,7 @@ class Seeds {
     // adicionando usuarios default
     await UserRepository.create({
       name: 'Admin',
-      email: 'admin@advansat.com',
+      email: 'admin@iena.com',
       password: '123'
     })
   }

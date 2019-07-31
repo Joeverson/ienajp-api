@@ -15,7 +15,7 @@
     "test": "node ./scripts/test.js",
     "coverage-report": "./node_modules/.bin/nyc report --reporter=lcov",
     "module:create": "node src/utils/generator/auto-create.js",
-    "seeds": "DB_HOST=mongodb://localhost DB_NAME=advansat babel-node src/utils/seeds.js"
+    "seeds": "DB_HOST=mongodb://localhost DB_NAME=iena babel-node src/utils/seeds.js"
   },
   "keywords": [],
   "author": "",
