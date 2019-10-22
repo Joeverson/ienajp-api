@@ -1,8 +1,13 @@
 
 import Member from './Model'
+import Validation from './Validation'
 
 export default {
   async create (data) {
+    Validation.NoEmpty(data.name)
+    Validation.NoEmpty(data.phone)
+    Validation.NoEmpty(data.address)
+
     // criando o Member
     return {
       data: await Member.create(data)

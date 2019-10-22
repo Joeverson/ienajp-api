@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import logger from '../src/utils/logger';
+import logger from '../src/utils/logger'
 const DB_URI = `${process.env.DB_HOST}/${process.env.DB_NAME}`
 
 /**
@@ -16,10 +16,15 @@ export default (() => {
     bufferMaxEntries: 0,
     autoReconnect: true,
     useNewUrlParser: true
-  };
-  mongoose.connect(DB_URI, options)
-  mongoose.connection.on('disconnected', () => logger.error('Mongoose disconnected'))
-  mongoose.connection.on('error', (err) => {
+  }
+  mongoose.connect(
+    DB_URI,
+    options
+  )
+  mongoose.connection.on('disconnected', () =>
+    logger.error('Mongoose disconnected')
+  )
+  mongoose.connection.on('error', err => {
     logger.error(`Mongoose connection error: ${err}`)
     mongoose.disconnect()
   })

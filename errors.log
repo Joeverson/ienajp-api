@@ -1,2 +1,103 @@
 {"level":"error","message":"ValidationException user.error.passwordInvalid","timestamp":"2019-07-31T19:12:28.827Z"}
 {"level":"error","message":"user.error.passwordInvalid","timestamp":"2019-07-31T19:12:28.828Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:47:23.359Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:48:36.713Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:49:11.624Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:52:09.737Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:53:43.704Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:54:00.435Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:54:36.057Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:54:36.068Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T00:54:36.136Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T01:13:19.558Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T01:47:56.748Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T01:49:20.219Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T01:49:48.540Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T01:50:07.699Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:00:56.269Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:01:38.257Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:05:44.217Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:05:48.552Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:06:33.734Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:07:39.696Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:08:09.193Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:08:54.394Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:10:26.619Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:10:50.324Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:11:58.616Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:12:00.974Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:12:14.828Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:12:18.546Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:12:57.253Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:14:26.178Z"}
+{"level":"error","message":"Mongoose disconnected","timestamp":"2019-10-21T02:15:43.950Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:20:05.259Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:20:15.055Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:21:57.568Z"}
+{"level":"error","message":"Member validation failed: birthday: Cast to Date failed for value \"20/10/2019\" at path \"birthday\"","timestamp":"2019-10-21T02:22:09.508Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:13:35.879Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:13:35.882Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:13:39.050Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:13:39.050Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:14:27.257Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:14:27.257Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:07.831Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:07.832Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:09.326Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:09.326Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:10.748Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:10.749Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:12.692Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:12.693Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:13.447Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:13.447Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:14.143Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:14.144Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:14.855Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:14.856Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:37.589Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:15:37.590Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:18:19.682Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:18:19.682Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:18:32.512Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:18:32.512Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:19:15.336Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:19:15.336Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:19:20.260Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:19:20.260Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:19:30.031Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:19:30.031Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:35.677Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:35.677Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:37.679Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:37.679Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:38.417Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:38.417Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:38.988Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:38.988Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:40.618Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:20:40.618Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:21:49.079Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:21:49.079Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:22:16.184Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:22:16.184Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:22:53.587Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:22:53.588Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:25:58.833Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:25:58.834Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:00.774Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:00.774Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:01.581Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:01.582Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:43.902Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:43.902Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:45.197Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:45.198Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:46.060Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:46.060Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:46.292Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:46.292Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:47.002Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:47.002Z"}
+{"level":"error","message":"ValidationException Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:47.470Z"}
+{"level":"error","message":"Campo undefined do membro está vazio, preencha por favor.","timestamp":"2019-10-22T03:26:47.470Z"}
